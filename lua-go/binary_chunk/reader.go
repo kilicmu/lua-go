@@ -9,6 +9,10 @@ type Reader struct {
 	data []byte
 }
 
+func New(data []byte) *Reader {
+	return &Reader{data}
+}
+
 func (r *Reader) readByte() byte {
 	b := r.data[0]
 	r.data = r.data[1:]
